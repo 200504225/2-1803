@@ -19,14 +19,20 @@ hero_rect = pygame.Rect(180, 500, 200, 200)
 #random.rand
 enemy = GameSprite("./images/enemy1.png",o)
 enemy1 = GameSprite("./images/enemy1.png",i)
+enemy2 = GameSprite("./images/enemy1.png",o)
+enemy3 = GameSprite("./images/enemy1.png",i)
+enemy4 = GameSprite("./images/enemy1.png",o)
 enemy1.rect.x = 100
-enemy_group = pygame.sprite.Group(enemy,enemy1)
+enemy2.rect.x = 200
+enemy3.rect.x = 300
+enemy4.rect.x = 400
+enemy_group = pygame.sprite.Group(enemy,enemy1,enemy2,enemy3,enemy4)
 #pygame.display.update()
 i = 0
 while True:
 
 	clock.tick(100)
-	hero_rect.x -= 10
+	hero_rect.x -= 20
 	if hero_rect.x <= 0:
 		hero_rect.x = 700
 	hero_rect.y -= 4
